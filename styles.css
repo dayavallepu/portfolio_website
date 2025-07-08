@@ -337,6 +337,11 @@ section {
     /* Light Sky Blue for Publications */
 }
 
+#services .section-title {
+    color: #87CEEB;
+    /* Light Sky Blue for Services, matching Publications */
+}
+
 /* About Section */
 .about {
     background: var(--bg-secondary);
