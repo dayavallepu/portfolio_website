@@ -1,735 +1,1343 @@
-<!DOCTYPE html>
-<html lang="en">
+:root {
+    --primary-color: #3b82f6;
+    --secondary-color: #f2f7f5;
+    --accent-color: #f59e0b;
+    --success-color: #059669;
+    --warning-color: #d97706;
+    --error-color: #dc2626;
+    --text-primary: hsl(108, 16%, 94%);
+    --text-secondary: #d1d5db;
+    --text-light: #9ca3af;
+    --bg-primary: #02052e;
+    --bg-secondary: #04012e;
+    --bg-accent: #050130;
+    --border-color: #374151;
+    --shadow-sm: 0 1px 2px 0 rgba(255, 255, 255, 0.05);
+    --shadow-md: 0 4px 6px -1px rgba(255, 255, 255, 0.1), 0 2px 4px -1px rgba(255, 255, 255, 0.06);
+    --shadow-lg: 0 10px 15px -3px rgba(255, 255, 255, 0.1), 0 4px 6px -2px rgba(255, 255, 255, 0.05);
+    --shadow-xl: 0 20px 25px -5px rgba(255, 255, 255, 0.1), 0 10px 10px -5px rgba(255, 255, 255, 0.04);
+}
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dayakar Vallepu - Data Science & AI Professional</title>
-    <link rel="stylesheet" href="styles.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-</head>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
-<body>
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <div class="nav-logo">
-                <h2>VD</h2>
-            </div>
-            <ul class="nav-menu">
-                <li class="nav-item">
-                    <a href="#home" class="nav-link">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#about" class="nav-link">About</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#education" class="nav-link">Education</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#skills" class="nav-link">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#experience" class="nav-link">Experience</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#projects" class="nav-link">Projects</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#publications" class="nav-link">Publication</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#services" class="nav-link">Services</a>
-                </li>
-                <li class="nav-item">
-                    <a href="#contact" class="nav-link">Contact</a>
-                </li>
-            </ul>
-            <div class="hamburger">
-                <span class="bar"></span>
-                <span class="bar"></span>
-                <span class="bar"></span>
-            </div>
-        </div>
-    </nav>
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: var(--text-primary);
+    background-color: var(--bg-primary);
+    padding-bottom: 80px;
+    /* Add space for fixed footer */
+}
 
-    <!-- Hero Section -->
-    <section id="home" class="hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="hero-text">
-                    <h1 class="hero-title">
-                        👋 Hi, I'm VALLEPU <span class="highlight">DAYAKAR</span>
-                    </h1>
-                    <h2 class="hero-subtitle">Data Science & AI Professional</h2>
-                    <p class="hero-description">
-                        Passionate about transforming data into actionable insights and building intelligent systems
-                        that drive business innovation. Specialized in machine learning, data analytics, and AI
-                        solutions.
-                    </p>
-                    <div class="hero-buttons">
-                        <a href="#contact" class="btn btn-primary">Get In Touch</a>
-                        <a href="#projects" class="btn btn-secondary">View Projects</a>
-                        <a href="mailto:dayavallepu@gmail.com" class="btn icon-btn" title="Gmail" target="_blank">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                        <a href="https://linkedin.com/in/dayakar-vallepu" class="btn icon-btn" title="LinkedIn"
-                            target="_blank">
-                            <i class="fab fa-linkedin"></i>
-                        </a>
-                        <a href="https://github.com/dayavallepu" class="btn icon-btn" title="GitHub" target="_blank">
-                            <i class="fab fa-github"></i>
-                        </a>
-                    </div>
-                </div>
-                <div class="hero-image">
-                    <div class="profile-avatar large-avatar">
-                        <img src="public/LMR_3468.jpg" alt="Dayakar Vallepu - Professional Photo">
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+}
 
-    <!-- About Section -->
-    <section id="about" class="about">
-        <div class="container">
-            <h2 class="section-title">About Me</h2>
-            <div class="about-content">
-                <div class="about-text">
-                    <p>
-                        Motivated Computer Science and Engineering (CSE) student specializing in Data Science, with
-                        hands-on internship experience at AISPRY. Over 4 years in quality assurance, production, and
-                        manufacturing at Amara Raja, Kia Motors, and BorgWarner. Skilled in process optimization,
-                        quality control, and machine handling. Passionate about leveraging Data Science and AI for
-                        efficiency and innovation in industrial and real-world applications.
-                    </p>
-                    <div class="stats">
-                        <div class="stat-item">
-                            <h3>4+</h3>
-                            <p>Years of Experience</p>
-                        </div>
-                        <div class="stat-item">
-                            <h3>4+</h3>
-                            <p>Projects Completed</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Navigation */
+.navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: linear-gradient(90deg, #010c3e 0%, #020646 100%);
+    /* Or use: background: #38bdf8; for solid blue */
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid var(--border-color);
+    z-index: 1000;
+    transition: all 0.3s ease;
+}
 
-    <!-- Education & Certifications Section -->
-    <section id="education" class="education">
-        <div class="container">
-            <h2 class="section-title">Education</h2>
-            <div class="education-grid">
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-graduation-cap"></i>
-                    </div>
-                    <h3>B.Tech (CSE - Data Science)</h3>
-                    <h4>ABR College of Engineering & Technology, Kanigiri, AP</h4>
-                    <span class="education-date">2022 - 2025</span>
-                    <p>CGPA: 6.87 / 10</p>
-                </div>
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-university"></i>
-                    </div>
-                    <h3>Diploma (Mechanical Engineering)</h3>
-                    <h4>Govt Polytechnic College, Gudur, AP</h4>
-                    <span class="education-date">2015 - 2018</span>
-                    <p>CGPA: 7.86 / 10</p>
-                </div>
-                <div class="education-card">
-                    <div class="education-icon">
-                        <i class="fas fa-school"></i>
-                    </div>
-                    <h3>Secondary School</h3>
-                    <h4>ZP High School, Daggavolu, AP</h4>
-                    <span class="education-date">2014 - 2015</span>
-                    <p>CGPA: 7.70 / 10</p>
-                </div>
-            </div>
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+}
 
-            <!-- Certifications Section (place after education cards) -->
-            <h2 class="section-title" style="margin-top:2.5rem;">Certifications</h2>
-            <div class="certifications-grid">
-                <!-- Python (Font Awesome, blue) -->
-                <a href="https://drive.google.com/file/d/1ojwMBOHHp1T09WX21CdfvmXMPuVhcvYS/view" target="_blank"
-                    class="certification-card">
-                    <i class="fab fa-python"
-                        style="color:#3776AB;background: #ffd343; border-radius: 50%; padding: 0.4rem;"></i>
-                    <div>
-                        <h4>Python Fundamentals (Gold) | NASSCOM</h4>
-                        <span>Feb 2025</span>
-                    </div>
-                </a>
-                <!-- SQL (Font Awesome, blue) -->
-                <a href="https://drive.google.com/file/d/1lI7cNV6nmSk4hjg67JXyIqyJOfjDAyME/view" target="_blank"
-                    class="certification-card">
-                    <i class="fas fa-database"
-                        style="color:#4479A1;background: #f4f4f4; border-radius: 50%; padding: 0.4rem;"></i>
-                    <div>
-                        <h4>Basic Course on SQL | 360DigiTMG</h4>
-                        <span>Aug 2024</span>
-                    </div>
-                </a>
-                <!-- Power BI (SVG, yellow) -->
-                <a href="https://drive.google.com/file/d/18Cb8mqXtigyr-X0VuHKW1Z1zQ9Uf-sIB/view" target="_blank"
-                    class="certification-card">
-                    <span style="display:inline-block;background:#fff200;border-radius:50%;padding:0.3rem;">
-                        <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/powerbi.svg" alt="Power BI"
-                            style="width:2rem;height:2rem;vertical-align:middle;filter:none;">
-                    </span>
-                    <div>
-                        <h4>Data Visualization Using Power BI | 360DigiTMG</h4>
-                        <span>Aug 2024</span>
-                    </div>
-                </a>
-                <!-- Data Science & AI (graduation cap, blue) -->
-                <a href="https://drive.google.com/file/d/1FEDQXe95B4j1LHgUjSKynB9riVOAhw3o/view" target="_blank"
-                    class="certification-card">
-                    <i class="fas fa-user-graduate"
-                        style="color:#3b82f6;background: #e0f2fe; border-radius: 50%; padding: 0.4rem;"></i>
-                    <div>
-                        <h4>Professional Program on Data Science and AI | 360DigiTMG</h4>
-                        <span>Nov 2024</span>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+.nav-logo h2 {
+    color: #87CEEB;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills">
-        <div class="container">
-            <h2 class="section-title">Technical Skills</h2>
-            <div class="skills-grid">
-                <div class="skill-category">
-                    <h3>Programming Languages</h3>
-                    <div class="skills-list">
-                        <a href="https://python.org" target="_blank" class="skill-tag">Python</a>
-                        <a href="https://sql.org" target="_blank" class="skill-tag">SQL</a>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Machine Learning</h3>
-                    <div class="skills-list">
-                        <a href="https://scikit-learn.org" target="_blank" class="skill-tag">Scikit-learn</a>
-                        <a href="https://tensorflow.org" target="_blank" class="skill-tag">TensorFlow</a>
-                        <a href="https://pytorch.org" target="_blank" class="skill-tag">PyTorch</a>
-                        <a href="https://keras.io" target="_blank" class="skill-tag">Keras</a>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Data Analysis</h3>
-                    <div class="skills-list">
-                        <a href="https://pandas.pydata.org" target="_blank" class="skill-tag">Pandas</a>
-                        <a href="https://numpy.org" target="_blank" class="skill-tag">NumPy</a>
-                        <a href="https://matplotlib.org" target="_blank" class="skill-tag">Matplotlib</a>
-                        <a href="https://seaborn.pydata.org" target="_blank" class="skill-tag">Seaborn</a>
-                        <a href="https://plotly.com" target="_blank" class="skill-tag">Plotly</a>
-                        <a href="https://tableau.com" target="_blank" class="skill-tag">Tableau</a>
-                        <a href="https://powerbi.microsoft.com" target="_blank" class="skill-tag">Power BI</a>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Databases</h3>
-                    <div class="skills-list">
-                        <a href="https://mongodb.com" target="_blank" class="skill-tag">MongoDB</a>
-                        <a href="https://postgresql.org" target="_blank" class="skill-tag">PostgreSQL</a>
-                        <a href="https://mysql.com" target="_blank" class="skill-tag">MySQL</a>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Computer Vision</h3>
-                    <div class="skills-list">
-                        <a href="https://pjreddie.com/darknet/yolo/" target="_blank" class="skill-tag">YOLO</a>
-                        <a href="https://opencv.org/" target="_blank" class="skill-tag">OpenCV</a>
-                        <a href="https://roboflow.com/" target="_blank" class="skill-tag">Roboflow</a>
-                        <a href="https://pypi.org/project/digitalsreeni-image-annotator/" target="_blank"
-                            class="skill-tag">Digital Sreeni</a>
-                        <a href="https://pytorch.org/vision/stable/models/fasterrcnn_resnet50_fpn.html" target="_blank"
-                            class="skill-tag">Faster-RCNN</a>
-                        <span class="skill-tag">Image Segmentation</span>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>NLP</h3>
-                    <div class="skills-list">
-                        <a href="https://platform.openai.com/docs/models/gpt-4" target="_blank"
-                            class="skill-tag">GPT</a>
-                        <a href="https://en.wikipedia.org/wiki/Recurrent_neural_network" target="_blank"
-                            class="skill-tag">RNN</a>
-                        <a href="https://en.wikipedia.org/wiki/Long_short_term_memory" target="_blank"
-                            class="skill-tag">LSTM</a>
-                        <a href="https://huggingface.co/transformers/" target="_blank"
-                            class="skill-tag">Transformers</a>
-                        <a href="https://en.wikipedia.org/wiki/Large_language_model" target="_blank"
-                            class="skill-tag">LLM</a>
-                    </div>
-                </div>
-                <div class="skill-category">
-                    <h3>Model Deployment</h3>
-                    <div class="skills-list">
-                        <a href="https://streamlit.io/" target="_blank" class="skill-tag">Streamlit</a>
-                        <a href="https://flask.palletsprojects.com/" target="_blank" class="skill-tag">Flask</a>
-                        <a href="https://react.dev/" target="_blank" class="skill-tag">React JS</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-menu {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
 
-    <!-- Experience Section -->
-    <section id="experience" class="experience">
-        <div class="container">
-            <h2 class="section-title">Professional Experience</h2>
-            <div class="timeline">
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content" data-company="aispry">
-                        <h3 class="exp-title">Data Science & AI Intern</h3>
-                        <h4 class="exp-company">AiSPRY</h4>
-                        <span class="timeline-date">DEC 2024 – JUL 2025</span>
-                        <ul>
-                            <li>Applying Data Science and AI methodologies to address real-world business challenges.
-                            </li>
-                            <li>Developing hands-on projects in Machine Learning, Deep Learning, Transformers, Computer
-                                Vision and Gen AI.</li>
-                            <li>Completing industry-relevant certifications to enhance technical skills and knowledge.
-                            </li>
-                            <li>Contributing to projects using ML and AI tools to optimize processes and drive
-                                innovation.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content" data-company="amara">
-                        <h3 class="exp-title">Asst. Engineer (QA)</h3>
-                        <h4 class="exp-company">Amara Raja</h4>
-                        <span class="timeline-date">MAR 2022 – DEC 2022</span>
-                        <ul>
-                            <li>Managed quality control processes for injection molding and bush casting.</li>
-                            <li>Addressed customer complaints, performed root cause analysis (RCA), and implemented
-                                corrective actions.</li>
-                            <li>Utilized 7 QC tools for risk assessment and to maintain product quality standards.</li>
-                            <li>Conducted 5S and DRM meetings to identify areas for continuous process improvement.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content" data-company="kia">
-                        <h3 class="exp-title">Company Trainee (Quality)</h3>
-                        <h4 class="exp-company">Kia Motors</h4>
-                        <span class="timeline-date">SEP 2019 – MAR 2022</span>
-                        <ul>
-                            <li>Conducted inspections to ensure the quality of stamped panels, sub-assemblies, and final
-                                assemblies.</li>
-                            <li>Measured and analyzed critical dimensions using CMM, calipers, and gauges.</li>
-                            <li>Supported the implementation of quality improvement initiatives and cost-saving
-                                projects.</li>
-                            <li>Participated in internal audits and supported ISO/TS 16949 compliance efforts.</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="timeline-item">
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-content" data-company="borgwarner">
-                        <h3 class="exp-title">Apprentice (Production)</h3>
-                        <h4 class="exp-company">Borg Warner</h4>
-                        <span class="timeline-date">JUL 2018 – SEP 2019</span>
-                        <ul>
-                            <li>Operated production machines and ensured smooth manufacturing operations.</li>
-                            <li>Conducted quality checks and coordinated production reports with senior management.</li>
-                            <li>Implemented 5S practices and collaborated on process optimization ideas.</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+.nav-link {
+    text-decoration: none;
+    color: var(--text-primary);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    position: relative;
+}
 
-    <!-- Projects Section -->
-    <section id="projects" class="projects">
-        <div class="container">
-            <h2 class="section-title">Featured Projects</h2>
-            <div class="projects-grid">
-                <!-- FIRST PROJECT -->
-                <a href="https://drive.google.com/file/d/1WjSrZ4Dy-2EAMAgbLRiOv1OihRmyeVds/view?usp=drive_link"
-                    target="_blank" class="project-card-link" style="text-decoration:none;">
-                    <div class="project-card" style="cursor:pointer;">
-                        <div class="project-image">
-                            <img src="https://i.ytimg.com/vi/b1SRxPS6Mm8/maxresdefault.jpg"
-                                alt="Highway Inspection and Maintenance Using AI"
-                                style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;">
-                        </div>
-                        <div class="project-content">
-                            <h3>Highway Inspection and Maintenance Using AI</h3>
-                            <p>
-                                Developed a YOLOv8s-seg model for real-time road defect detection using image/video data
-                                collected and annotated in COCO json format. Achieved 90%+ accuracy in detecting faded
-                                lane
-                                lines, damaged crash barriers, and damaged road signs. Deployed the solution via a
-                                Streamlit
-                                app and optimized the model using ONNX on Google Colab (GPU).
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag" style="background:#3776AB;color:#fff;">
-                                    <i class="fab fa-python"></i> Python
-                                </span>
-                                <span class="tech-tag" style="background:#ee4c2c;color:#fff;">
-                                    <i class="fas fa-fire"></i> PyTorch
-                                </span>
-                                <span class="tech-tag" style="background:#0ea5e9;color:#fff;">
-                                    <i class="fas fa-eye"></i> Computer Vision
-                                </span>
-                                <span class="tech-tag" style="background:#ffcc00;color:#222;">
-                                    <i class="fas fa-bullseye"></i> YOLOv8
-                                </span>
-                                <span class="tech-tag" style="background:#ff4b4b;color:#fff;">
-                                    <i class="fas fa-stream"></i> Streamlit
-                                </span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/dayavallepu/Higway-inspection-and-Maintenance"
-                                    class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                                <a href="https://drive.google.com/file/d/1gfvX0MMm7sJwap23W_B4srAuXYyeYeS_/view?usp=sharing"
-                                    class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-                <!-- SECOND PROJECT -->
-                <a href="https://drive.google.com/file/d/11jOqqHBa_Oi3fRP_sCfwXpLf932Kvxqh/view?usp=drive_link"
-                    target="_blank" class="project-card-link" style="text-decoration:none;">
-                    <div class="project-card" style="cursor:pointer;">
-                        <div class="project-image">
-                            <img src="https://swissgrid.imgix.net/content/dam/swissgrid/about-us/newsroom/blog/2024/regelenergie-header.jpg.hash/486e3711aa0409dfcb61c3ab47c682c86e3de57f?fit=crop&auto=format%2Ccompress%2Ccs%3Dtinysrgb&w=3320&h=1370"
-                                alt="AI-Powered Electricity Price Forecasting"
-                                style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;">
-                        </div>
-                        <div class="project-content">
-                            <h3>AI-Powered Electricity Price Forecasting</h3>
-                            <p>
-                                Developed LSTM and XGBoost models to forecast electricity prices and demand with less
-                                than 10% MAPE.
-                                Integrated real-time market data, reducing financial risks by 15–20% and improving
-                                returns.
-                                Deployed a Streamlit dashboard using MySQL for storage and visualized with Matplotlib
-                                and Seaborn.
-                                Trained on Google Colab (GPU) for efficient modeling and faster deployment.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag" style="background:#3776AB;color:#fff;">
-                                    <i class="fab fa-python"></i> Python
-                                </span>
-                                <span class="tech-tag" style="background:#00bcd4;color:#fff;">
-                                    <i class="fas fa-chart-bar"></i> Plotly
-                                </span>
-                                <span class="tech-tag" style="background:#6a1b9a;color:#fff;">
-                                    <i class="fas fa-wave-square"></i> LSTM
-                                </span>
-                                <span class="tech-tag" style="background:#ff9800;color:#fff;">
-                                    <i class="fas fa-bolt"></i> XGBoost
-                                </span>
-                                <span class="tech-tag" style="background:#00618a;color:#fff;">
-                                    <i class="fas fa-database"></i> MySQL
-                                </span>
-                                <span class="tech-tag" style="background:#ff4b4b;color:#fff;">
-                                    <i class="fas fa-stream"></i> Streamlit
-                                </span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/dayavallepu/AI-Powered-Electricity-Price-Forecasting"
-                                    class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                                <a href="https://drive.google.com/file/d/1PkJVs8VBkw4EBzHr09e7TwrBVdH9yJuL/view?usp=sharing"
-                                    class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+.nav-link:hover {
+    color: var(--primary-color);
+}
 
-                <!-- Third PROJECT -->
-                <a href="https://drive.google.com/file/d/1sU_FqwdqbbOn5Ft_YzC_gEhNwiOSMWUo/view?usp=drive_link"
-                    target="_blank" class="project-card-link" style="text-decoration:none;">
-                    <div class="project-card" style="cursor:pointer;">
-                        <div class="project-image">
-                            <img src="https://www.weightron.com/wp-content/uploads/2016/03/Weightron-Radiation-Detection-for-Scrap-Metal-Yards.jpg"
-                                alt="Detect and Count Hazardous Substance in Metal Scrap"
-                                style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;">
-                        </div>
-                        <div class="project-content">
-                            <h3>Detect and Count Hazardous Substance in Metal Scrap</h3>
-                            <p>
-                                Developed a YOLOv9s-based detection system for identifying hazardous substances in metal
-                                scrap, ensuring >95% accuracy.
-                                Collected and annotated data using Digital Sreeni with extensive augmentation for
-                                balance.
-                                Deployed via a Flask web app with support for image, video, and live detection,
-                                including real-time interactive Plotly visualizations.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag" style="background:#3776AB;color:#fff;">
-                                    <i class="fab fa-python"></i> Python
-                                </span>
-                                <span class="tech-tag" style="background:#00bcd4;color:#fff;">
-                                    <i class="fas fa-chart-bar"></i> Plotly
-                                </span>
-                                <span class="tech-tag" style="background:#00618a;color:#fff;">
-                                    <i class="fas fa-database"></i> MySQL
-                                </span>
-                                <span class="tech-tag" style="background:#0ea5e9;color:#fff;">
-                                    <i class="fas fa-eye"></i> Computer Vision
-                                </span>
-                                <span class="tech-tag" style="background:#ee4c2c;color:#fff;">
-                                    <i class="fas fa-fire"></i> PyTorch
-                                </span>
-                                <span class="tech-tag" style="background:#ffcc00;color:#222;">
-                                    <i class="fas fa-bullseye"></i> YOLOv9
-                                </span>
-                                <span class="tech-tag" style="background:#e34c26;color:#fff;">
-                                    <i class="fas fa-rocket"></i> Flask
-                                </span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/dayavallepu/Detect-and-Count-Hazardous-Substance-in-Metal-Scrap"
-                                    class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                                <a href="https://drive.google.com/file/d/1UN21ArYJK_ECnTBGy04_LWeDK0YX936K/view?usp=sharing"
-                                    class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: width 0.3s ease;
+}
 
-                <!-- FOURTH PROJECT -->
-                <a href="https://drive.google.com/file/d/1aYtsW7zZhGcJ9i59-pMEs7gb76N9q_uv/view?usp=drive_link"
-                    target="_blank" class="project-card-link" style="text-decoration:none;">
-                    <div class="project-card" style="cursor:pointer;">
-                        <div class="project-image">
-                            <img src="https://images.stockcake.com/public/8/9/2/892a75fa-5835-4339-abf5-5a8a3684c8d4_large/coding-robot-teacher-stockcake.jpg"
-                                alt="AI-Powered Story Generation and Narration System"
-                                style="width:100%;height:180px;object-fit:cover;border-radius:12px 12px 0 0;">
-                        </div>
-                        <div class="project-content">
-                            <h3>AI-Powered Story Generation and Narration System</h3>
-                            <p>
-                                Built an AI-powered story generation system using Gemini 1.5 Flash, tailored for
-                                age-appropriate, multilingual storytelling with TTS integration.Developed a React.js +
-                                Flask full-stack app, with MongoDB for user data and Power BI dashboards for live
-                                monitoring.Achieved >90% approval
-                                and less than 15s latency, ensuring high-quality, engaging, and scalable story delivery
-                                for EdTech
-                                platforms.
-                            </p>
-                            <div class="project-tech">
-                                <span class="tech-tag" style="background:#3776AB;color:#fff;">
-                                    <i class="fab fa-python"></i> Python
-                                </span>
-                                <span class="tech-tag" style="background:#3FA037;color:#fff;">
-                                    <i class="fas fa-database"></i> MongoDB
-                                </span>
-                                <span class="tech-tag" style="background:#6495ED;color:#fff;">
-                                    <i class="fas fa-brain"></i> LLM
-                                </span>
-                                <span class="tech-tag" style="background:#8B9467;color:#fff;">
-                                    <i class="fas fa-robot"></i> Gemini
-                                </span>
-                                <span class="tech-tag" style="background:#F2C464;color:#fff;">
-                                    <i class="fas fa-chart-line"></i> Power BI
-                                </span>
-                                <span class="tech-tag" style="background:#8B0A1A;color:#fff;">
-                                    <i class="fas fa-ai"></i> Gen AI
-                                </span>
-                                <span class="tech-tag" style="background:#e34c26;color:#fff;">
-                                    <i class="fas fa-rocket"></i> Flask
-                                </span>
-                                <span class="tech-tag" style="background:#61DAFB;color:#fff;">
-                                    <i class="fab fa-react"></i> ReactJS
-                                </span>
-                            </div>
-                            <div class="project-links">
-                                <a href="https://github.com/dayavallepu/AI-Powered-Story-Generation-and-Narration-System"
-                                    class="project-link" target="_blank">
-                                    <i class="fab fa-github"></i> Code
-                                </a>
-                                <a href="https://drive.google.com/file/d/1-zZhk7DtXUnFFtQnL9Qe3jsVKjlTpsov/view?usp=sharing"
-                                    class="project-link" target="_blank">
-                                    <i class="fas fa-external-link-alt"></i> Demo
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                </a>
-            </div>
-        </div>
-    </section>
+.nav-link:hover::after {
+    width: 100%;
+}
 
-    <!-- Research Publications Section -->
-    <section id="publications" class="publications">
-        <div class="container">
-            <h2 class="section-title">Research Publications</h2>
-            <a href="https://drive.google.com/file/d/1Et8tOwHtqx07DZFecNeaJiJ8SQn0cxRR/view?usp=drive_link"
-                target="_blank" class="publication-card-link" style="text-decoration:none;">
-                <div class="publication-card" style="cursor:pointer;">
-                    <div class="publication-content">
-                        <h3>AI-Based Road Safety Audit System</h3>
-                        <h4>International Journal of Innovative Science and Research Technology</h4>
-                        <p>
-                            Research on AI-based road safety audit system using computer vision and YOLO algorithms to
-                            detect road infrastructure defects, traffic violations, and safety hazards in real-time. The
-                            system improves road safety assessment efficiency and accuracy compared to traditional
-                            manual inspection methods.
-                        </p>
-                        <div class="publication-links">
-                            <a href="https://www.ijisrt.com/ai-based-road-safety-audit-system" class="btn btn-orange"
-                                target="_blank">
-                                <i class="fas fa-file-alt"></i> View Paper
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </a>
-        </div>
-    </section>
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
 
-    <!-- Services Section -->
-    <section id="services" class="services">
-        <div class="container">
-            <h2 class="section-title">Services</h2>
-            <div class="services-grid">
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-robot"></i>
-                    </div>
-                    <h3>AI/ML Consulting & Model Development</h3>
-                    <p>End-to-end AI solution development from concept to deployment, including model architecture
-                        design, training, and optimization.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-eye"></i>
-                    </div>
-                    <h3>Computer Vision Solutions</h3>
-                    <p>Custom computer vision applications for object detection, image segmentation, quality inspection,
-                        and safety compliance monitoring.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-comments"></i>
-                    </div>
-                    <h3>NLP and Chatbot Integration</h3>
-                    <p>Natural language processing solutions, chatbot development, and conversational AI systems using
-                        latest LLM technologies.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-chart-bar"></i>
-                    </div>
-                    <h3>Data Analysis, Dashboards, and KPI Tracking</h3>
-                    <p>Comprehensive data analysis services with interactive dashboards using Power BI, Tableau, and
-                        custom visualization tools.</p>
-                </div>
-                <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-rocket"></i>
-                    </div>
-                    <h3>Real-Time AI Deployment</h3>
-                    <p>Scalable AI model deployment using FastAPI, Streamlit, ReactJS, and cloud platforms for real-time
-                        applications.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+.bar {
+    width: 25px;
+    height: 3px;
+    background: var(--text-primary);
+    margin: 3px 0;
+    transition: 0.3s;
+}
 
-    <!-- Contact Section -->
-    <section id="contact" class="contact">
-        <div class="container">
-            <h2 class="section-title">Get In Touch</h2>
-            <div class="contact-content">
-                <div class="contact-info">
-                    <h3>Contact Information</h3>
-                    <div class="contact-methods">
-                        <div class="contact-method" onclick="window.open('mailto:dayavallepu@gmail.com', '_blank')">
-                            <i class="fas fa-envelope"></i>
-                            <div>
-                                <h4>Email</h4>
-                                <p>dayavallepu@gmail.com</p>
-                            </div>
-                        </div>
-                        <div class="contact-method" onclick="window.open('tel:+919849519010', '_blank')">
-                            <i class="fas fa-phone"></i>
-                            <div>
-                                <h4>Phone</h4>
-                                <p>+91 98495 19010</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="contact-form">
-                    <h3>Send Message</h3>
-                    <form style="margin-top: 1.5rem;" onsubmit="handleContactForm(event)">
-                        <div class="form-group">
-                            <input type="text" id="contact-name" name="name" placeholder="Your Name" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" id="contact-email" name="email" placeholder="Your Email" required>
-                        </div>
-                        <div class="form-group">
-                            <textarea id="contact-message" name="message" placeholder="Your Message" rows="5"
-                                required></textarea>
-                        </div>
-                        <button type="submit" class="btn btn-primary">Send Message</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
+/* Hero Section */
+.hero {
+    padding: 120px 0 80px;
+    background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
+    min-height: 80vh;
+    display: flex;
+    align-items: center;
+}
 
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-text">
-                    <p>&copy; 2025 Dayakar Vallepu. All rights reserved.</p>
-                </div>
-                <div class="social-links">
-                    <a href="https://linkedin.com/in/dayakar-vallepu" target="_blank" class="social-link">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                    <a href="https://github.com/dayavallepu" target="_blank" class="social-link">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://wa.me/+919849519010" target="_blank" class="social-link">
-                        <i class="fab fa-whatsapp"></i>
-                    </a>
-                    <a href="mailto:dayavallepu@gmail.com" class="social-link">
-                        <i class="fas fa-envelope"></i>
-                    </a>
-                </div>
-            </div>
-        </div>
-    </footer>
+.hero-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
 
-    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
-    <script src="script.js"></script>
-</body>
+.hero-title {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
 
-</html>
+.hero-title .highlight {
+    color: #3b82f6 !important;
+}
+
+.hero-subtitle {
+    font-size: 1.5rem;
+    color: var(--secondary-color);
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero-description {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn {
+    padding: 12px 32px;
+    border: none;
+    border-radius: 8px;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+.btn-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-secondary:hover {
+    background: var(--primary-color);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.profile-card {
+    background: var(--bg-accent);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-xl);
+    border: 1px solid var(--border-color);
+    margin-top: 3rem;
+}
+
+.profile-avatar {
+    width: 200px;
+    height: 200px;
+    border-radius: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    overflow: hidden;
+    border: 4px solid var(--primary-color);
+    position: relative;
+    animation: blueGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes blueGlow {
+    0% {
+        box-shadow: 0 0 20px rgba(59, 130, 246, 0.3);
+    }
+
+    100% {
+        box-shadow: 0 0 40px rgba(59, 130, 246, 0.8), 0 0 60px rgba(59, 130, 246, 0.4);
+    }
+}
+
+.profile-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.contact-info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem;
+    border-radius: 8px;
+    transition: background 0.3s ease;
+    cursor: pointer;
+}
+
+.contact-item:hover {
+    background: var(--bg-secondary);
+}
+
+.contact-item i {
+    color: var(--primary-color);
+    width: 20px;
+}
+
+.contact-item span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+}
+
+.section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 3rem;
+    color: var(--text-primary);
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    border-radius: 2px;
+}
+
+/* Section Titles - Give each section a unique color */
+#about .section-title {
+    color: #14c2e9;
+    /* Blue for About Me */
+}
+
+#education .section-title {
+    color: #14c2e9;
+    /* Orange for Education */
+}
+
+.certifications-grid~.section-title,
+#certifications .section-title {
+    color: #14c2e9;
+    /* Green for Certifications */
+}
+
+#skills .section-title {
+    color: #14c2e9;
+    /* Purple for Technical Skills */
+}
+
+#experience .section-title {
+    color: #14c2e9;
+    /* Indigo for Professional Experience */
+}
+
+#projects .section-title {
+    color: #14c2e9;
+    /* Yellow for Projects */
+}
+
+#contact .section-title {
+    color: #14c2e9;
+    /* Red for Contact */
+}
+
+#publications .section-title {
+    color: #87CEEB;
+    /* Light Sky Blue for Publications */
+}
+
+#services .section-title {
+    color: #87CEEB;
+    /* Light Sky Blue for Services, matching Publications */
+}
+
+/* About Section */
+.about {
+    background: var(--bg-secondary);
+}
+
+.about-text {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.about-text p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: var(--text-secondary);
+    margin-bottom: 2rem;
+}
+
+.stats {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    /* Changed from 3 to 2 since only two cards */
+    gap: 3rem;
+    /* Increased gap for more space between cards */
+    margin-top: 3rem;
+}
+
+.stat-item {
+    text-align: center;
+    padding: 2rem;
+    background: var(--bg-accent);
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.stat-item:hover {
+    transform: translateY(-5px);
+}
+
+.stat-item h3 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+/* Skills Section */
+.skills-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.skill-category {
+    background: var(--bg-accent);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.skill-category:hover {
+    transform: translateY(-5px);
+}
+
+.skill-category h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+.skill-tag {
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    color: white;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.skill-tag:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 15px rgba(59, 130, 246, 0.3);
+}
+
+/* Unique colors for each skill-category's skill-tag buttons */
+.skill-category:nth-child(1) .skill-tag {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.skill-category:nth-child(2) .skill-tag {
+    background: #10b981;
+    color: #fff;
+}
+
+.skill-category:nth-child(3) .skill-tag {
+    background: #f59e0b;
+    color: #fff;
+}
+
+.skill-category:nth-child(4) .skill-tag {
+    background: #6366f1;
+    color: #fff;
+}
+
+.skill-category:nth-child(5) .skill-tag {
+    background: #0ea5e9;
+    color: #fff;
+}
+
+.skill-category:nth-child(6) .skill-tag {
+    background: #a21caf;
+    color: #fff;
+}
+
+.skill-category:nth-child(7) .skill-tag {
+    background: #ef4444;
+    color: #fff;
+}
+
+/* Experience Section */
+.experience {
+    background: var(--bg-secondary);
+}
+
+.timeline {
+    position: relative;
+    max-width: 1000px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 2.5rem;
+}
+
+.timeline::before {
+    display: none;
+    /* Remove the vertical line */
+}
+
+.timeline-item {
+    position: static;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+.timeline-dot {
+    display: none;
+    /* Remove the dot */
+}
+
+.timeline-content {
+    background: var(--bg-accent);
+    padding: 2.5rem 2rem;
+    border-radius: 18px;
+    border: 2px solid var(--primary-color);
+    margin: 0 auto;
+    max-width: 900px;
+    transition: transform 0.3s, box-shadow 0.3s;
+    box-shadow: none;
+    /* No shadow by default */
+}
+
+.timeline-content:hover {
+    box-shadow: 0 8px 32px 0 rgba(14, 165, 233, 0.25), 0 1.5px 8px 0 rgba(59, 130, 246, 0.18);
+    transform: translateY(-8px) scale(1.02);
+}
+
+.timeline-content ul {
+    list-style: none;
+    padding-left: 0;
+}
+
+.timeline-content ul li {
+    position: relative;
+    padding-left: 1.5em;
+    margin-bottom: 0.7em;
+}
+
+.timeline-content ul li::before {
+    content: "➔";
+    position: absolute;
+    left: 0;
+    color: #0ea5e9;
+    /* Use your primary blue or any color you like */
+    font-size: 1.1em;
+    line-height: 1;
+}
+
+/* Education Section */
+.education-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2rem;
+}
+
+.education-card {
+    background: var(--bg-accent);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    text-align: center;
+    transition: transform 0.3s ease;
+    border-top: 4px solid var(--primary-color);
+    border: 1px solid var(--border-color);
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+}
+
+.education-icon,
+.certification-card i {
+    width: 40px;
+    height: 40px;
+    min-width: 40px;
+    min-height: 40px;
+    background: linear-gradient(135deg, #3b82f6, #14c2e9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: white;
+    margin: 0 auto 1rem;
+    /* Remove any padding or scaling that could stretch the icon */
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.education-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.education-card h4 {
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.education-date {
+    display: inline-block;
+    background: var(--accent-color);
+    color: white;
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.education-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+}
+
+/* Projects Section */
+.projects {
+    background: var(--bg-secondary);
+}
+
+.projects-grid {
+    display: flex !important;
+    flex-wrap: wrap !important;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    justify-content: flex-start;
+    width: 100%;
+}
+
+.project-card-link:first-child,
+.project-card:first-child {
+    justify-self: start;
+}
+
+.project-card {
+    background: var(--bg-accent);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.3s ease;
+    border: 2px solid blue;
+    width: 45% !important;
+    max-width: 45% !important;
+    margin: 0 !important;
+    box-sizing: border-box;
+    display: block;
+    flex: 0 0 45% !important;
+}
+
+/* Move second row to the right */
+.project-card:nth-child(3),
+.project-card:nth-child(4) {
+    margin-left: 0.30% !important;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(59, 130, 246, 0.4) !important;
+}
+
+.project-image {
+    height: 200px;
+    background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: white;
+}
+
+.project-content {
+    padding: 1.5rem;
+}
+
+.project-content h3 {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.75rem;
+}
+
+.project-content p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+}
+
+.project-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.tech-tag {
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+    padding: 0.25rem 0.75rem;
+    border-radius: 15px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    border: 1px solid var(--border-color);
+}
+
+.project-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.project-link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--primary-color);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.project-link:hover {
+    color: var(--secondary-color);
+}
+
+/* Services Section */
+.services {
+    background: var(--bg-primary);
+    padding: 4rem 0;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.service-card {
+    background: var(--bg-accent);
+    padding: 2.5rem 2rem;
+    border-radius: 16px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.service-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 40px rgba(59, 130, 246, 0.2);
+    border-color: var(--primary-color);
+}
+
+.service-icon {
+    width: 80px;
+    height: 80px;
+    background: linear-gradient(135deg, #3b82f6, #14c2e9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem;
+    font-size: 2rem;
+    color: white;
+}
+
+.service-card h3 {
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.service-card p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    font-size: 0.95rem;
+}
+
+/* Publications Section */
+.publications {
+    background: var(--bg-secondary);
+    padding: 4rem 0;
+}
+
+.publication-card {
+    background: var(--bg-accent);
+    border-radius: 12px;
+    padding: 3rem;
+    box-shadow: none;
+    border: 2px solid var(--primary-color);
+    max-width: 1200px;
+    margin: 0 auto;
+    transition: transform 0.3s ease;
+}
+
+.publication-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 40px rgba(5, 152, 243, 0.4);
+}
+
+.publication-content h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.publication-content h4 {
+    font-size: 1.2rem;
+    color: var(--secondary-color);
+    font-weight: 500;
+    margin-bottom: 1rem;
+}
+
+.publication-content p {
+    color: var(--text-secondary);
+    line-height: 1.6;
+    margin-bottom: 2rem;
+}
+
+.publication-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.btn-orange {
+    background: #f59e0b !important;
+    color: white !important;
+    border: none !important;
+}
+
+.btn-orange:hover {
+    background: #d97706 !important;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Contact Section */
+.contact-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: start;
+}
+
+.contact-info h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+}
+
+.contact-info p {
+    color: var(--text-secondary);
+    line-height: 1.7;
+    margin-bottom: 2rem;
+}
+
+.contact-methods {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.contact-method {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: var(--bg-accent);
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+    border: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.contact-method:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-md);
+}
+
+.contact-method i {
+    width: 40px;
+    height: 40px;
+    background: linear-gradient(135deg, #3b82f6, #14c2e9);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+}
+
+.contact-method h4 {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+}
+
+.contact-method p {
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+.contact-form {
+    background: var(--bg-accent);
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--border-color);
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--border-color);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+    font-family: inherit;
+    background: var(--bg-secondary);
+    color: var(--text-primary);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+.form-group textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+/* Footer */
+.footer {
+    background: rgba(4, 1, 46, 0.3);
+    backdrop-filter: blur(8px);
+    color: var(--text-primary);
+    padding: 1rem 0;
+    border-top: 1px solid rgba(55, 65, 81, 0.2);
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-links {
+    display: flex;
+    gap: 1rem;
+}
+
+.social-link {
+    width: 40px;
+    height: 40px;
+    background: var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-decoration: none;
+    transition: transform 0.3s ease;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    background: var(--secondary-color);
+}
+
+/* Add to your styles.css */
+.icon-btn {
+    background: var(--bg-accent);
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.3rem;
+    margin-left: 0.5rem;
+    transition: background 0.3s, color 0.3s, transform 0.2s;
+    padding: 0;
+}
+
+.icon-btn:hover {
+    background: var(--primary-color);
+    color: #fff;
+    transform: translateY(-2px) scale(1.08);
+}
+
+/* Certifications Section */
+.certifications-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+.certification-card {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    background: var(--bg-accent);
+    color: #fff;
+    padding: 1.2rem 1rem;
+    border-radius: 12px;
+    text-decoration: none;
+    box-shadow: var(--shadow-md);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.certification-card:hover {
+    transform: translateY(-4px) scale(1.03);
+    box-shadow: 0 8px 25px rgba(25, 116, 244, 0.3);
+    background: var(--primary-color);
+    color: #fff;
+}
+
+.certification-card i {
+    font-size: 2rem;
+    color: var(--accent-color);
+}
+
+/* Unique colors for each hero button */
+.hero-buttons .btn-primary {
+    background: #3b82f6;
+    color: #fff;
+}
+
+.hero-buttons .btn-secondary {
+    background: #10b981;
+    color: #fff;
+    border: none;
+}
+
+.hero-buttons .icon-btn[title="Gmail"] {
+    background: #ea4335;
+    color: #fff;
+}
+
+.hero-buttons .icon-btn[title="LinkedIn"] {
+    background: #0077b5;
+    color: #fff;
+}
+
+.hero-buttons .icon-btn[title="GitHub"] {
+    background: #24292e;
+    color: #fff;
+}
+
+/* AiSPRY Experience Colors */
+.aispry-title {
+    color: #0ea5e9;
+    font-weight: 700;
+}
+
+.aispry-company {
+    color: #38bdf8;
+    font-weight: 600;
+}
+
+.aispry-date {
+    color: #f59e0b;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Example for Amara Raja (customize as needed) */
+.amara-title {
+    color: #10b981;
+    font-weight: 700;
+}
+
+.amara-company {
+    color: #059669;
+    font-weight: 600;
+}
+
+.amara-date {
+    color: #f59e0b;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Example for Kia Motors (customize as needed) */
+.kia-title {
+    color: #a21caf;
+    font-weight: 700;
+}
+
+.kia-company {
+    color: #6366f1;
+    font-weight: 600;
+}
+
+.kia-date {
+    color: #f59e0b;
+    font-weight: 600;
+    display: inline-block;
+    margin-bottom: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .hamburger {
+        display: flex;
+    }
+
+    .nav-menu {
+        position: fixed;
+        left: -100%;
+        top: 70px;
+        flex-direction: column;
+        background-color: var(--bg-primary);
+        width: 100%;
+        text-align: center;
+        transition: 0.3s;
+        box-shadow: var(--shadow-lg);
+        padding: 2rem 0;
+        border-top: 1px solid var(--border-color);
+    }
+
+    .nav-menu.active {
+        left: 0;
+    }
+
+    .nav-menu li {
+        margin: 1rem 0;
+    }
+
+    .hero-content {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .hero-title {
+        font-size: 2.5rem;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .stats {
+        grid-template-columns: 1fr;
+    }
+
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .timeline::before {
+        left: 20px;
+    }
+
+    .timeline-item {
+        padding-left: 60px;
+    }
+
+    .timeline-dot {
+        left: 8px;
+    }
+
+    .education-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-content {
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .profile-avatar {
+        width: 150px;
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 0.75rem;
+    }
+
+    .hero {
+        padding: 100px 0 60px;
+    }
+
+    .hero-title {
+        font-size: 2rem;
+    }
+
+    .hero-subtitle {
+        font-size: 1.2rem;
+    }
+
+    .section-title {
+        font-size: 2rem;
+    }
+
+    .hero-buttons {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .profile-card {
+        padding: 1.5rem;
+    }
+
+    .profile-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .contact-item span {
+        font-size: 0.8rem;
+    }
+}
+
+@media (min-width: 769px) {
+    .projects-grid {
+        display: flex !important;
+        flex-wrap: wrap !important;
+        gap: 1.8rem !important;
+    }
+
+    .project-card {
+        width: 45% !important;
+        max-width: 47% !important;
+        flex: 0 0 45% !important;
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-grid {
+        flex-direction: column;
+    }
+
+    .project-card {
+        width: 100% !important;
+        max-width: 100% !important;
+        flex: 1 1 100% !important;
+    }
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading Animation */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.fade-in {
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+/* Scroll Animations */
+.reveal {
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.6s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Add this at the end of your CSS file */
+.large-avatar {
+    width: 300px !important;
+    height: 300px !important;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .large-avatar {
+        width: 180px !important;
+        height: 180px !important;
+    }
+}
+
+.exp-title,
+.exp-company,
+.timeline-date {
+    color: #0ea5e9;
+    font-weight: 700;
+}
+
+.timeline-date {
+    color: #f59e0b !important;
+    /* Orange */
+    font-weight: 700;
+}
