@@ -574,8 +574,8 @@ section {
 }
 
 .education-icon {
-    width: 80px;
-    height: 80px;
+    width: 100px;
+    height: 100px;
     background: linear-gradient(135deg, #3b82f6, #14c2e9);
     border-radius: 50%;
     display: flex;
