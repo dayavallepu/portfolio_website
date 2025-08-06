@@ -573,23 +573,17 @@ section {
     transform: translateY(-5px);
 }
 
-.education-icon,
-.certification-card i {
-    width: 40px;
-    height: 40px;
-    min-width: 40px;
-    min-height: 40px;
+.education-icon {
+    width: 80px;
+    height: 80px;
     background: linear-gradient(135deg, #3b82f6, #14c2e9);
     border-radius: 50%;
     display: flex;
     align-items: center;
     justify-content: center;
+    margin: 0 auto 1.5rem;
     font-size: 2rem;
     color: white;
-    margin: 0 auto 1rem;
-    /* Remove any padding or scaling that could stretch the icon */
-    padding: 0;
-    box-sizing: border-box;
 }
 
 .education-card h3 {
