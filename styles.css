@@ -117,7 +117,8 @@ body {
 
 /* Hero Section */
 .hero {
-    padding: 120px 0 80px;
+    padding: 80px 0 30px;
+    /* reduced bottom padding to bring About section up */
     background: linear-gradient(135deg, var(--bg-primary) 0%, var(--bg-secondary) 100%);
     min-height: 80vh;
     display: flex;
@@ -270,7 +271,7 @@ body {
 
 /* Section Styles */
 section {
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
 .section-title {
@@ -574,8 +575,8 @@ section {
 }
 
 .education-icon {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background: linear-gradient(135deg, #3b82f6, #14c2e9);
     border-radius: 50%;
     display: flex;
@@ -982,7 +983,9 @@ section {
 
 .social-link:hover {
     transform: translateY(-3px);
-    background: var(--secondary-color);
+    /* Remove background change on hover */
+    opacity: 0.8;
+    /* Optional: slightly fade the icon instead */
 }
 
 /* Add to your styles.css */
@@ -1039,6 +1042,38 @@ section {
 .certification-card i {
     font-size: 2rem;
     color: var(--accent-color);
+}
+
+.certification-card.centered {
+    grid-column: 1 / -1;
+    /* span full row so it sits centered at bottom */
+    justify-content: center;
+    /* center icon + text horizontally */
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 1.25rem;
+    text-align: left;
+}
+
+.certification-card.centered .certification-content {
+    display: block;
+}
+
+.certification-card.centered h3 {
+    margin: 0 0 0.25rem 0;
+    color: var(--text-primary);
+}
+
+.certification-card.centered h4 {
+    margin: 0 0 0.5rem 0;
+    color: var(--secondary-color);
+    font-weight: 500;
+}
+
+.certification-card.centered p {
+    color: var(--text-secondary);
+    margin: 0;
+    line-height: 1.5;
 }
 
 /* Unique colors for each hero button */
